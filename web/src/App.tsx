@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Home';
 import NewPage from './pages/New';
 
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify';
+
 function App() {
 
   const theme = {
@@ -22,6 +25,7 @@ function App() {
         <Route path="/new" element={<NewPage/>} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </ThemeProvider>
   );
 }
